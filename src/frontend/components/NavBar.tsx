@@ -1,10 +1,10 @@
 // NavBar.tsx
 // Fixed top navigation bar — nav links + dark mode toggle button.
 // The toggle fires the wipe-up animation defined in App.tsx.
-// To add nav items: add an object to NavLinks below.
 
 import { useState, useEffect } from "react";
 import { UseTheme } from "../ThemeContext";
+import { UseBackgroundMusic } from "../UseBackgroundMusic";
 
 const NavLinks = [
   { Label: "Home", Href: "#Home" },
@@ -18,6 +18,7 @@ export default function NavBar() {
   const [IsScrolled, SetIsScrolled] = useState(false);
   const [IsMenuOpen, SetIsMenuOpen] = useState(false);
   const { IsDarkMode, ToggleDarkMode } = UseTheme();
+  const { IsMusicOn, ToggleMusic } = UseBackgroundMusic();
 
   useEffect(() => {
     const HandleScroll = () => SetIsScrolled(window.scrollY > 20);
@@ -66,10 +67,15 @@ export default function NavBar() {
           <li>
             <DarkModeButton IsDarkMode={IsDarkMode} OnClick={ToggleDarkMode} />
           </li>
+          {/* Music toggle — desktop */}
+          <li>
+            <MusicButton IsMusicOn={IsMusicOn} OnClick={ToggleMusic} />
+          </li>
         </ul>
 
         {/* Mobile: dark mode toggle + hamburger */}
         <div className="md:hidden flex items-center gap-3">
+          <MusicButton IsMusicOn={IsMusicOn} OnClick={ToggleMusic} />
           <DarkModeButton IsDarkMode={IsDarkMode} OnClick={ToggleDarkMode} />
           <button
             className="flex flex-col gap-1.5 p-1"
@@ -139,6 +145,24 @@ function DarkModeButton({ IsDarkMode, OnClick }: { IsDarkMode: boolean; OnClick:
       >
         {IsDarkMode ? "☀" : "🌙"}
       </span>
+    </button>
+  );
+}
+// Music toggle button — 🔊 when music is playing, 🔇 when it's off.
+function MusicButton({ IsMusicOn, OnClick }: { IsMusicOn: boolean; OnClick: () => void }) {
+  return (
+    <button
+      onClick={OnClick}
+      aria-label={IsMusicOn ? "Turn music off" : "Turn music on"}
+      title={IsMusicOn ? "Music off" : "Music on"}
+      className="w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm transition-all duration-300"
+      style={{
+        background: IsMusicOn ? "var(--Color-Primary)" : "transparent",
+        borderColor: "var(--Color-Primary)",
+        color: IsMusicOn ? "#ffffff" : "var(--Color-Primary)",
+      }}
+    >
+      {IsMusicOn ? "🔊" : "🔇"}
     </button>
   );
 }

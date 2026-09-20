@@ -6,7 +6,7 @@ const AboutText =
   "I'm Francis Rainier C. Cutamora, a Computer Engineering student currently enrolled at Cebu Institute of Technology – University (CIT-U). I started my academic journey at Southern Leyte State University (SLSU) before transferring to CIT-U to further pursue my passion in computing and software development.";
 
 const AboutText2 =
-  "I enjoy building practical projects ranging from medical systems and chat apps to game jam entries and assembly-level games. I'm always looking for opportunities to grow, compete, and collaborate with like-minded developers.";
+  "I like gaming, tinkering with electronics, reading books, and exploring new technologies. I enjoy learning and experimenting with different programming languages, frameworks, and tools to expand my skill set and stay up-to-date with the latest trends in the tech industry.";
 
 const SkillsList = [
   "C / C++", "Python", "JavaScript", "HTML & CSS",

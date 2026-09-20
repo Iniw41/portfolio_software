@@ -21,6 +21,7 @@ import AwardsSection from "@/frontend/components/AwardsSection";
 import ContactSection from "@/frontend/components/ContactSection";
 import FooterSection from "@/frontend/components/FooterSection";
 
+
 // Duration must match the WipeUp animation in index.css (0.75s = 750ms)
 const WipeDuration = 750;
 

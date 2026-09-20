@@ -8,7 +8,7 @@ import ProfilePhoto from "@/assets/iniwFbPfp.jpg";
 const HeroTitle = "Francis Rainier C. Cutamora";
 const HeroSubtitle = "Computer Engineering Student";
 const HeroDescription =
-  "Crafting digital solutions one commit at a time. Passionate about software development, game design, and building tools that matter.";
+  "RAH";
 
 export default function HeroSection() {
   const ScrollTo = (Href: string) =>
