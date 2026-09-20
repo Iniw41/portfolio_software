@@ -17,7 +17,7 @@ To change the color scheme, update the `:root` block in that file.
 | `--Color-White`     | `#ffffff` | Page background                           |
 | `--Color-Gray`      | `#c4c4c4` | Body text, subtle labels                  |
 
----x
+---
 
 ## Animations
 
