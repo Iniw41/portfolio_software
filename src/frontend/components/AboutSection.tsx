@@ -1,6 +1,5 @@
 // AboutSection.tsx
 // Bio, education, and skills.
-// Edit AboutText, EducationList, or SkillsList to update content.
 
 const AboutText =
   "I'm Francis Rainier C. Cutamora, a Computer Engineering student currently enrolled at Cebu Institute of Technology – University (CIT-U). I started my academic journey at Southern Leyte State University (SLSU) before transferring to CIT-U to further pursue my passion in computing and software development.";

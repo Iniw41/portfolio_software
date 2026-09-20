@@ -8,7 +8,7 @@ import ProfilePhoto from "@/assets/iniwFbPfp.jpg";
 const HeroTitle = "Francis Rainier C. Cutamora";
 const HeroSubtitle = "Computer Engineering Student";
 const HeroDescription =
-  "RAH";
+  "RAH (ssry I don't got a short professional tagline.)";
 
 export default function HeroSection() {
   const ScrollTo = (Href: string) =>
