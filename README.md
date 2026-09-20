@@ -1,9 +1,14 @@
-Francis Rainier C. Cutamora — Portfolio Website
-Personal portfolio for Francis Rainier C. Cutamora, a Computer Engineering student at Cebu Institute of Technology – University (CIT-U).
+# Francis Rainier C. Cutamora — Portfolio Website
 
-Built with React + Vite + TypeScript + Tailwind CSS v4.
+Personal portfolio for **Francis Rainier C. Cutamora**, a Computer Engineering student at Cebu Institute of Technology – University (CIT-U).
 
-Project Structure
+Built with **React + Vite + TypeScript + Tailwind CSS v4**.
+
+---
+
+## Project Structure
+
+```
 /
 ├── backend/                    ← Reserved for future backend services (currently empty)
 │   └── README.md               ← Notes on what goes here when a backend is needed
@@ -34,26 +39,39 @@ Project Structure
 ├── vite.config.ts      ← Vite build configuration (React plugin, Tailwind, path aliases)
 ├── package.json        ← Project dependencies and npm scripts
 └── README.md           ← This file
-Color Scheme
-All colors are defined as CSS custom properties in src/index.css. To change the color scheme, update the :root block in that file.
+```
 
-Variable	Hex	Used For
---Color-Dark	#091540	Headings, navbar text, footer background
---Color-Primary	#1B2CC1	Buttons, accents, links
---Color-Mid	#7692FF	Tags, secondary elements, decorations
---Color-Light	#ABD2FA	Badges, borders, soft backgrounds
---Color-White	#ffffff	Page background
---Color-Gray	#c4c4c4	Body text, subtle labels
-How to Edit Common Things
-Change your name or intro text
-Open src/frontend/components/HeroSection.tsx and edit:
+---
 
+## Color Scheme
+
+All colors are defined as CSS custom properties in `src/index.css`.
+To change the color scheme, update the `:root` block in that file.
+
+| Variable            | Hex       | Used For                                  |
+|---------------------|-----------|-------------------------------------------|
+| `--Color-Dark`      | `#091540` | Headings, navbar text, footer background  |
+| `--Color-Primary`   | `#1B2CC1` | Buttons, accents, links                   |
+| `--Color-Mid`       | `#7692FF` | Tags, secondary elements, decorations     |
+| `--Color-Light`     | `#ABD2FA` | Badges, borders, soft backgrounds         |
+| `--Color-White`     | `#ffffff` | Page background                           |
+| `--Color-Gray`      | `#c4c4c4` | Body text, subtle labels                  |
+
+---
+
+## How to Edit Common Things
+
+### Change your name or intro text
+Open `src/frontend/components/HeroSection.tsx` and edit:
+```tsx
 const HeroTitle = "Francis Rainier C. Cutamora";
 const HeroSubtitle = "Computer Engineering Student";
 const HeroDescription = "...";
-Add or remove a project
-Open src/frontend/components/ProjectsSection.tsx and add/remove entries in ProjectsList:
+```
 
+### Add or remove a project
+Open `src/frontend/components/ProjectsSection.tsx` and add/remove entries in `ProjectsList`:
+```tsx
 {
   Title: "My New Project",
   Description: "What it does.",
@@ -61,50 +79,76 @@ Open src/frontend/components/ProjectsSection.tsx and add/remove entries in Proje
   Tags: ["Web", "React"],
   Status: "In Progress",  // or "Semi-Complete"
 }
-Add a new award or certificate
-Open src/frontend/components/AwardsSection.tsx:
+```
 
-Copy your image into src/assets/certificates/ or src/assets/awards/
-Import it at the top of the file
-Add an entry to AwardsList
-Update social links
-Open src/frontend/components/ContactSection.tsx and edit the Url in SocialLinks.
+### Add a new award or certificate
+Open `src/frontend/components/AwardsSection.tsx`:
+1. Copy your image into `src/assets/certificates/` or `src/assets/awards/`
+2. Import it at the top of the file
+3. Add an entry to `AwardsList`
 
-Add or remove nav items
-Open src/frontend/components/NavBar.tsx and edit NavLinks.
+### Update social links
+Open `src/frontend/components/ContactSection.tsx` and edit the `Url` in `SocialLinks`.
 
-Change the profile photo
-Replace src/assets/ProfilePhoto.png with your new photo (keep the same filename), or:
+### Add or remove nav items
+Open `src/frontend/components/NavBar.tsx` and edit `NavLinks`.
 
-Add a new image to src/assets/
-Update the import in src/frontend/components/HeroSection.tsx
-Animations
-Animations are defined in src/index.css:
+### Change the profile photo
+Replace `src/assets/ProfilePhoto.png` with your new photo (keep the same filename), or:
+1. Add a new image to `src/assets/`
+2. Update the import in `src/frontend/components/HeroSection.tsx`
 
-Class	Effect
-.animate-float	Gentle floating up/down (decorative shapes)
-.animate-slide-up	Slide in from below on page load (hero text)
-.animate-slide-up-delay	Same, but with a 0.2s delay (hero photo)
-.animate-on-scroll	Fade in from below when scrolled into view
-Scroll animations are activated in src/App.tsx using the IntersectionObserver API. Add the class animate-on-scroll to any element you want to animate on scroll.
+---
 
-Development
-A Vite dev server is already running. Changes to any .tsx or .css file are reflected instantly in the preview.
+## Animations
 
+Animations are defined in `src/index.css`:
+
+| Class                   | Effect                                         |
+|-------------------------|------------------------------------------------|
+| `.animate-float`        | Gentle floating up/down (decorative shapes)    |
+| `.animate-slide-up`     | Slide in from below on page load (hero text)   |
+| `.animate-slide-up-delay` | Same, but with a 0.2s delay (hero photo)    |
+| `.animate-on-scroll`    | Fade in from below when scrolled into view     |
+
+Scroll animations are activated in `src/App.tsx` using the `IntersectionObserver` API.
+Add the class `animate-on-scroll` to any element you want to animate on scroll.
+
+---
+
+## Development
+
+A Vite dev server is already running. Changes to any `.tsx` or `.css` file are reflected instantly in the preview.
+
+```bash
 # Install dependencies (if needed)
 pnpm install
 
 # The dev server is already running — no need to start it manually.
 # If for some reason you need to start it:
 pnpm dev
-Tech Stack
-React 19 — UI component library
-TypeScript 5.7 — Type-safe JavaScript
-Vite 8 — Build tool and dev server
-Tailwind CSS v4 — Utility-first CSS framework
-HTML5 / CSS3 — Underlying web standards
-Naming Convention
-This project uses PascalCase for all component names, variables, constants, and function names inside component files, as per the project's coding style.
+```
+
+---
+
+## Tech Stack
+
+- **React 19** — UI component library
+- **TypeScript 5.7** — Type-safe JavaScript
+- **Vite 8** — Build tool and dev server
+- **Tailwind CSS v4** — Utility-first CSS framework
+- **HTML5 / CSS3** — Underlying web standards
+
+---
+
+## Naming Convention
+
+This project uses **PascalCase** for all component names, variables, constants, and function names inside component files, as per the project's coding style.
+
+---
+
+*Portfolio of Francis Rainier C. Cutamora — Computer Engineering Student, CIT-U Cebu*
+
 
 # React + TypeScript + Vite
 
